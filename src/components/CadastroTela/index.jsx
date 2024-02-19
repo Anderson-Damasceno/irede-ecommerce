@@ -1,7 +1,7 @@
 export default function CadastroTela(){
     return(
-        <div className="flex flex-row">
-            <div className="bg-slate-200">
+        <div className="flex flex-row h-screen w-screen">
+            <div className="bg-slate-200 w-1/2 h-screen">
                 <div className="bg-white w-4/5 h-5/6 flex flex-col items-center justify-center">
                     <h1 className="font-bold">Cadastre-se</h1>
                     <form action="" className="flex flex-col justify-center w-4/5 h-5/6">
@@ -19,8 +19,8 @@ export default function CadastroTela(){
                     </form>
                 </div>
             </div>
-            <div className="bg-sky-800 flex flex-col items-center justify-center">
-                <h1>Sua nova experiência em compras online</h1>
+            <div className="bg-sky-800 flex flex-col items-center justify-center w-1/2 h-screen">
+                <h1 className="text-white text-2xl">Sua nova experiência em compras online</h1>
                 <img src="src\assets\caixa.png" alt="" />
             </div>
         </div>
