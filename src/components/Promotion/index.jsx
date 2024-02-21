@@ -1,7 +1,8 @@
 export default function Promotion(){
     return(
-        <>
-        <img src="src\assets\destaque.png" alt="" />
-        </>
+        <div className="relative">
+        <img src="src\assets\destaque.png" alt=""/>
+        <button className="bg-orange-500 rounded absolute">Aproveitar oferta</button>
+        </div>
     )
 }

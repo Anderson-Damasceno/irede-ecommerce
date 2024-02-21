@@ -4,7 +4,7 @@ import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 export default function Header(){
     return(
         <>
-        <header className="bg-sky-800 h-36 w-screen flex flex-col items-center justify-center">
+        <header className="bg-sky-800  w-screen flex flex-col items-center justify-center">
         <div className="flex flex-row gap-8 text-white mt-6 justify-center w-full md:justify-between">
             <IoMenuSharp size={28} className="md:hidden"/>
             <img src="src\assets\caixa.png" alt="" className="md:pl-4" />

@@ -1,7 +1,7 @@
 export default function Footer(){
     return(
-        <>
-        <footer className="bg-sky-700 mb-0"> 
+        <div>
+        <footer className="bg-sky-700 mb-0 w-full"> 
         <div className="">
         <div className="flex flex-row gap-4">
         <div>
@@ -43,6 +43,6 @@ export default function Footer(){
         </div>
 
         </footer>
-        </>
+        </div>
     )
 }
