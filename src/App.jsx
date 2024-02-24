@@ -4,6 +4,8 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Pedidos from "./pages/Pedidos"
 import Cadastro from "./pages/Cadastro"
+import Produtos from './pages/Produtos'
+import Categorias from './pages/Categorias'
 
 function App() {
  
@@ -16,6 +18,8 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/pedidos' element={<Pedidos/>}/>
       <Route path='/cadastro' element={<Cadastro/>}/>
+      <Route path='/produtos' element={<Produtos/>}/>
+      <Route path='/categorias' element={<Categorias/>}/>
     </Routes>
     </BrowserRouter>
     </>
