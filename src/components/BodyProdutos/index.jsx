@@ -16,6 +16,31 @@ export default function BodyProdutos(){
             </div>
             </div>
         </div>
+        <div className="flex flex-row w-screen">
+            <div className="bg-slate-200 w-32 h-32 rounded drop-shadow flex flex-col m-8">
+              <div className="flex flex-row gap-1">
+                <input type="radio" id="tenis" name="same"/>
+                <label htmlFor="tenis">Tenis</label>
+              </div>
+              <div className="flex flex-row gap-1">
+                <input type="radio" id="blusa" name="same"/>
+                <label htmlFor="blusa">Blusa</label>
+              </div>
+              <div className="flex flex-row gap-1">
+                <input type="radio" id="acessorios" name="same"/>
+                <label htmlFor="acessorios">Acessórios</label>
+              </div>
+              <div className="flex flex-row gap-1">
+                <input type="radio" id="calcas" name="same"/>
+                <label htmlFor="calcas">Calças</label>
+              </div>
+            </div>
+            <div>
+                <ul>
+                    <li><CardHome/></li>
+                </ul>
+            </div>
+        </div>
         </>
     )
 }

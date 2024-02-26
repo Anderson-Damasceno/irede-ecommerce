@@ -5,7 +5,7 @@ const clientController = require('../controllers/clientController')
 const router = express.Router()
 
 router.get('/', clientController.listClients)
-router.get('/', clientController.listClient)
+router.get('/:id', clientController.listClient)
 router.put('/', clientController.creatClient)
 router.post('/', clientController.updateClient)
 router.delete('/', clientController.deleteClient)

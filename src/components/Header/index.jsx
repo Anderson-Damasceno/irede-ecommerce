@@ -1,10 +1,11 @@
 import { IoMenuSharp } from "react-icons/io5";
 import { BsCart3 } from "react-icons/bs";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 export default function Header(){
     return(
         <>
-        <header className="bg-sky-800  w-screen flex flex-col items-center justify-center">
+        <header className="bg-sky-800  w-screen h-36 flex flex-col items-center justify-center">
         <div className="flex flex-row gap-8 text-white mt-6 justify-center w-full md:justify-between">
             <IoMenuSharp size={28} className="md:hidden"/>
             <img src="src\assets\caixa.png" alt="" className="md:pl-4" />
@@ -15,12 +16,12 @@ export default function Header(){
         <input type="text" className="rounded mt-6 pl-6 absolute" placeholder="Buscar"/>
         </div>
 
-        <div className="flex flex-row text-white w-full justify-center gap-2 max-md:hidden"> 
-        <a href="">Home</a>
-        <a href="">Produtos</a>
-        <a href="">Categorias</a>
-        <a href="">Meus Produtos</a>
-        </div>
+        <nav className="flex flex-row text-white w-full justify-center gap-2 max-md:hidden"> 
+        <Link to="/home">Home</Link>
+        <Link to="/produtos">Produtos</Link>
+        <Link to="/categorias">Categorias</Link>
+        <Link to="/pedidos">Meus Produtos</Link>
+        </nav>
         </header>
         </>
     )
