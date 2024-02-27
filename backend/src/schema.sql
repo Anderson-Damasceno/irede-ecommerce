@@ -5,7 +5,8 @@ CREATE TABLE Produto(
     nome VARCHAR NOT NULL,
     categoria_id INT NOT NULL REFERENCES Categoria(id_categoria),
     preco FLOAT NOT NULL,
-    descricao TEXT
+    descricao TEXT,
+    estoque INT
 )
 
 CREATE TABLE Cliente (
@@ -17,7 +18,10 @@ CREATE TABLE Cliente (
 
 CREATE TABLE ProdutoCliente(
     id_produto int REFERENCES Produto(id_produto) ON UPDATE CASCADE ON DELETE CASCADE,
-    id_cliente int REFERENCES Cliente(id_cliente) ON UPDATE CASCADE ON DELETE CASCADE
+    id_cliente int REFERENCES Cliente(id_cliente) ON UPDATE CASCADE ON DELETE CASCADE,
+    quantidade_produto int,
+    preco_hora_da_compra FLOAT,
+    pedido_id INT REFERENCES Pedido(id_pedido)
 )
 
 CREATE TABLE Categoria(
@@ -27,5 +31,7 @@ CREATE TABLE Categoria(
 
 CREATE TABLE Pedido(
     id_pedido INT NOT NULL PRIMARY KEY,
+    data_compra TIMESTAMP NOT NULL,
+    status_pedido BOOLEAN NOT NULL
     
 )

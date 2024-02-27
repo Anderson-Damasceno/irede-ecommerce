@@ -6,7 +6,10 @@ export default function Categorias(){
     return(
         <div>
             <Header/>
+            <div className="min-h-[90vh]">
             <BodyCategorias/>
+            </div>
+            
             <Footer/>
         </div>
     )

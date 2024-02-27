@@ -7,7 +7,10 @@ export default function Produtos(){
     return(
         <div>
             <Header/>
+            <div className="min-h-[90vh]">
             <BodyProdutos/>
+            </div>
+            
             <Footer/>
         </div>
     )

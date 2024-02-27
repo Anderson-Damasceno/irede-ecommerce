@@ -7,8 +7,10 @@ export default function Home(){
     return(
         <div>
         <Header/>
+        <div className="min-h-[90vh]">
         <Promotion/>
         <Destaque/>
+        </div>
         <Footer/>
         </div>
     )

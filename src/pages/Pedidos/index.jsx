@@ -7,7 +7,10 @@ export default function Pedidos(){
     return(
         <div>
             <Header/>
+            <div className="min-h-[90vh]">
             <BodyPedidos/>
+            </div>
+            
             <Footer/>
         </div>
     )
