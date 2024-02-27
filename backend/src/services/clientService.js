@@ -1,6 +1,6 @@
 
 // eslint-disable-next-line no-undef
-const clientModel = require('../models')
+const clientModel = require('../models/clientModel')
 
 //GET ALL
 const listClients = async () => {

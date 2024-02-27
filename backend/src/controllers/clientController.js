@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const clientService = require('../services')
+const clientService = require('../services/clientService')
 
 //GET ALL
 const listClients = async (req, res) => {
