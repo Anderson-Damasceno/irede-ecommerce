@@ -9,16 +9,16 @@ const listClients = async (req, res) => {
 
 //GET ONE
 const listClient = async (req, res) => {
-    const id = req.params
-    const listClient = clientService.listClient(id)
-    return res.status(200).send(listClient)
+    const email = req.params
+    const listClient = clientService.listClient(email)
+    return res.status(200).json(listClient)
 }
 
 //POST
-const creatClient = async (req, res) => {
+const createClient = async (req, res) => {
     const client = req.body
-    const creatClient = clientService.creatClient(client)
-    return res.status(201).send(creatClient)
+    const createClient = clientService.createClient(client)
+    return res.status(201).json(createClient)
 }
 
 //PUT
@@ -39,7 +39,7 @@ const deleteClient = async (req, res) => {
 module.exports = {
     listClients,
     listClient,
-    creatClient,
+    createClient,
     updateClient,
     deleteClient
 }

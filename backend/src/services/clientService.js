@@ -9,15 +9,29 @@ const listClients = async () => {
 }
 
 //GET ONE
-const listClient = async (id) => {
-    const listClient = clientModel.listClient(id)
+const listClient = async (email) => {
+    const listClient = clientModel.listClient(email)
     return listClient
 }
 
 //POST
-const creatClient = async (client) => {
-    const creatClient = clientModel.creatClient(client)
-    return creatClient
+const createClient = async (client) => {
+   
+    if (client.nome == "" || undefined) {
+        return {mensagem: "Nome inválido"}
+    } else if (client.email == "" || undefined) {
+        return { mensagem: "Email inválido"}
+    } else if (client.senha == "" || undefined) {
+        return {mensagem: "Senha inválida"}
+    }
+
+    const existe = listClient(client.email)
+    if(existe){
+        return {mensagem: "Cadastro inválido, já existe no banco de dados"}
+    }
+
+    const createClient = clientModel.createClient(client)
+    return createClient
 }
 
 //PUT
@@ -36,7 +50,7 @@ const deleteClient = async (id) => {
 module.exports = {
     listClients,
     listClient,
-    creatClient,
+    createClient,
     updateClient,
     deleteClient
 }

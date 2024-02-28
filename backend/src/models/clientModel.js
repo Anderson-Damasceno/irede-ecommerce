@@ -7,18 +7,20 @@ const listClients = async () => {
 }
 
 //GET ONE
-const listClient = async (id) => {
-    const listClient = id
+const listClient = async (email) => {
+    const query = 'SELECT FROM Cliente Where Cliente.email = $1;'
+    const params = [email]
+    const listClient = await pool.query(query, params)
     return listClient
 }
 
 //POST
-const creatClient = async (client) => {
+const createClient = async (client) => {
     const {nome, email, senha} = client
     const query = 'INSERT INTO Cliente (nome, email, senha) VALUES ($1, $2, $3);'
     const params = [nome, email, senha]
-    const creatClient = await pool.query(query, params)
-    return creatClient
+    const createClient = await pool.query(query, params)
+    return createClient
 }
 
 //PUT
@@ -37,7 +39,7 @@ const deleteClient = async (id) => {
 module.exports = {
     listClients,
     listClient,
-    creatClient,
+    createClient,
     updateClient,
     deleteClient
 }

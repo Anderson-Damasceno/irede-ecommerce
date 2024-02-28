@@ -3,7 +3,7 @@ CREATE TABLE Produto(
     id_produto INT SERIAL NOT NULL PRIMARY KEY,
     imagem VARCHAR NOT NULL,
     nome VARCHAR NOT NULL,
-    categoria_id INT REFERENCES Categoria(id_categoria),
+    categoria_id INT REFERENCES Categoria(id_categoria) ON DELETE SET NULL,
     preco FLOAT NOT NULL,
     descricao TEXT,
     estoque INT
@@ -12,7 +12,7 @@ CREATE TABLE Produto(
 CREATE TABLE Cliente (
     id_cliente INT SERIAL NOT NULL PRIMARY KEY,
     nome VARCHAR NOT NULL,
-    email VARCHAR NOT NULL,
+    email VARCHAR NOT NULL UNIQUE,
     senha VARCHAR NOT NULL
 )
 
