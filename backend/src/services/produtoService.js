@@ -4,10 +4,22 @@ const produtoModel = require('../models/produtoModel')
 
 //GET ALL
 const listProdutos = async () => {
-    const listProdutos = produtoModel.listProdutos()
+    const listProdutos = await produtoModel.listProdutos()
     return listProdutos
 }
 
+const listProduto = async (id) => {
+    const listProduto = await produtoModel.listProduto(id)
+    return listProduto
+}
+
+const filterProduto = async (id_categoria) => {
+    const filterProduto = await produtoModel.filterProduto(id_categoria)
+    return filterProduto
+}
+
 module.exports = {
-    listProdutos
+    listProdutos,
+    listProduto,
+    filterProduto
 }

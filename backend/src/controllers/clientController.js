@@ -9,7 +9,7 @@ const listClients = async (req, res) => {
 
 //GET ONE
 const listClient = async (req, res) => {
-    const {id} = req.body
+    const id = req.params
     const listClient = clientService.listClient(id)
     return res.status(200).send(listClient)
 }
@@ -18,7 +18,7 @@ const listClient = async (req, res) => {
 const creatClient = async (req, res) => {
     const client = req.body
     const creatClient = clientService.creatClient(client)
-    return res.status(200).send(creatClient)
+    return res.status(201).send(creatClient)
 }
 
 //PUT

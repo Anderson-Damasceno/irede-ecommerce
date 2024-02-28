@@ -1,4 +1,5 @@
-
+/* eslint-disable no-undef */
+const pool = require('../connection/dbConnection')
 //GET ALL
 const listClients = async () => {
     const listClients = ''
@@ -13,7 +14,10 @@ const listClient = async (id) => {
 
 //POST
 const creatClient = async (client) => {
-    const creatClient = client
+    const {nome, email, senha} = client
+    const query = 'INSERT INTO Cliente (nome, email, senha) VALUES ($1, $2, $3);'
+    const params = [nome, email, senha]
+    const creatClient = await pool.query(query, params)
     return creatClient
 }
 
