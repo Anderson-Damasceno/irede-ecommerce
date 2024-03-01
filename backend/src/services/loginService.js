@@ -11,7 +11,7 @@ const loginClient = async (body) => {
     }
     const loginClient = await loginModel.loginClient(body)
 
-    if(loginClient) {
+    if(loginClient) { //try catch, verifica senha ou nome
         let token = jwt.sign({
             id: 'idCliente',
             nome: 'nomeCliente',

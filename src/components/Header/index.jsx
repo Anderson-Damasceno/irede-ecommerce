@@ -9,9 +9,11 @@ export default function Header(){
         <div className="flex flex-row gap-8 text-white mt-6 justify-center w-full md:justify-between">
             <IoMenuSharp size={28} className="md:hidden"/>
             <img src="src\assets\caixa.png" alt="" className="md:pl-4" />
-            <h1 className="text-white">Cadastre-se</h1>
+            <div className="flex flex-row gap-2 justify-center items-center">
+            <h1 className="text-white max-md:hidden">Cadastre-se</h1>
             <button className="bg-orange-500 rounded p-2">Entrar</button>
-            <BsCart3 size={28} className="md:pr-4"/>
+            <BsCart3 className="md:pr-4 text-4xl md:text-5xl"/>
+            </div>
         </div>
         <div className="flex justify-center relative h-40">
         <HiMiniMagnifyingGlass style={{position:"absolute", top:"30px", left: "-100px", zIndex:"1" }}/>
