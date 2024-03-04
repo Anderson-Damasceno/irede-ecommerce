@@ -1,10 +1,11 @@
 
-import CadastroTela from "../../components/CadastroTela";
+import CadastroMobile from "../../components/CadastroMobile";
+
 
 export default function Cadastro(){
     return(
         <>
-        <CadastroTela/>
+        <CadastroMobile/>
         </>
     )
 }

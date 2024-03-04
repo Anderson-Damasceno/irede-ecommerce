@@ -9,7 +9,7 @@ export default function Header(){
         <div className="flex flex-row gap-8 text-white mt-6 justify-center w-full md:justify-between">
             <IoMenuSharp size={28} className="md:hidden"/>
             <img src="src\assets\caixa.png" alt="" className="md:pl-4" />
-            <div className="flex flex-row gap-2 justify-center items-center">
+            <div className="flex flex-row gap-4 justify-center items-center">
             <h1 className="text-white max-md:hidden">Cadastre-se</h1>
             <button className="bg-orange-500 rounded p-2">Entrar</button>
             <BsCart3 className="md:pr-4 text-4xl md:text-5xl"/>
@@ -21,7 +21,7 @@ export default function Header(){
         </div>
 
         <nav className="flex flex-row text-white w-full justify-center gap-2 max-md:hidden"> 
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/produtos">Produtos</Link>
         <Link to="/categorias">Categorias</Link>
         <Link to="/pedidos">Meus Produtos</Link>
