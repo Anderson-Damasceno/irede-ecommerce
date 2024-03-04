@@ -24,6 +24,7 @@ const loginClient = async (body) => {
         }
         
     return {mensagem: "Cliente inexistente ou dados inválidos", bool: false}
+    }
 }
 
 module.exports = {
