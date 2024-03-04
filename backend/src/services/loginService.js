@@ -17,7 +17,7 @@ const loginClient = async (body) => {
                 id: 'idCliente',
                 nome: 'nomeCliente',
                 email: 'emailCliente'
-            }, 'secret',{expiresIn: '1h'})
+            }, process.env.SECRET,{expiresIn: '1h'})
             return {mensagem: "Acesso validado", bool: true, token: token}
         } catch (exeption){
             console.log(exeption)
