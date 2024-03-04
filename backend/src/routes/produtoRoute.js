@@ -7,3 +7,5 @@ const router = express.Router()
 router.get('/', produtoController.listProdutos)
 router.get('/:id', produtoController.listProduto)
 router.get('/categorias/:id',produtoController.filterProduto)
+
+module.exports = router

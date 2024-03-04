@@ -1,6 +1,6 @@
 
 CREATE TABLE Produto(
-    id_produto INT SERIAL NOT NULL PRIMARY KEY,
+    id_produto SERIAL NOT NULL PRIMARY KEY,
     imagem VARCHAR NOT NULL,
     nome VARCHAR NOT NULL,
     categoria_id INT REFERENCES Categoria(id_categoria) ON DELETE SET NULL,
@@ -25,7 +25,7 @@ CREATE TABLE ProdutoCliente(
 )
 
 CREATE TABLE Categoria(
-    id_categoria INT SERIAL NOT NULL PRIMARY KEY,
+    id_categoria SERIAL NOT NULL PRIMARY KEY,
     nome VARCHAR NOT NULL UNIQUE
 )
 

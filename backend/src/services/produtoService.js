@@ -5,6 +5,7 @@ const produtoModel = require('../models/produtoModel')
 //GET ALL
 const listProdutos = async () => {
     const listProdutos = await produtoModel.listProdutos()
+    console.log(listProdutos.rows[0])
     return listProdutos
 }
 
