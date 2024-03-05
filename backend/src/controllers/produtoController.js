@@ -9,15 +9,16 @@ const listProdutos = async (req, res) => {
 
 //GET ONE
 const listProduto = async (req, res) => {
-    const id = req.params
+    const {id} = req.params
+    
     const listProduto = await produtoService.listProduto(id)
     return res.status(201).json(listProduto)
 }
 
 //GET PRODUTOS POR CATEGORIA
 const filterProduto = async (req, res) => {
-    const id_categoria = req.params
-    const filterProduto = await produtoService.filterProduto(id_categoria)
+    const {id} = req.params
+    const filterProduto = await produtoService.filterProduto(id)
     return res.status(200).json(filterProduto)
 }
 

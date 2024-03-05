@@ -11,13 +11,12 @@ const listProdutos = async () => {
 
 const listProduto = async (id) => {
     const listProduto = await produtoModel.listProduto(id)
-    console.log(listProduto)
-    return listProduto
+    return listProduto.rows
 }
 
-const filterProduto = async (id_categoria) => {
-    const filterProduto = await produtoModel.filterProduto(id_categoria)
-    return filterProduto
+const filterProduto = async (id) => {
+    const filterProduto = await produtoModel.filterProduto(id)
+    return filterProduto.rows
 }
 
 module.exports = {

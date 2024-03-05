@@ -7,16 +7,17 @@ const listProdutos = async () => {
 }
 
 const listProduto = async (id) => {
-    const query = 'SELECT FROM Produto WHERE Produto.id = $1;'
+    const query = 'SELECT * FROM Produto WHERE Produto.id_produto = $1;'
     const params = id
-    const listProduto = await pool.query(query, params)
+    const listProduto = await pool.query(query,[params])
     return listProduto
 }
 
-const filterProduto = async (id_categoria) => {
-    const query = 'SELECT FROM Produto WHERE Produto.categoria_id = $1;'
-    const params = id_categoria
-    const filterProduto = await pool.query(query, params)
+const filterProduto = async (id) => {
+    const query = 'SELECT * FROM Produto WHERE Produto.categoria_id = $1;'
+    const params = id
+    console.log(params)
+    const filterProduto = await pool.query(query, [params])
     return filterProduto
 }
 
