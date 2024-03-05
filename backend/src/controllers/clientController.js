@@ -9,8 +9,8 @@ const listClients = async (req, res) => {
 
 //GET ONE
 const listClient = async (req, res) => {
-    const email = req.params
-    const listClient = clientService.listClient(email)
+    const {email} = req.params
+    const listClient = await clientService.listClient(email)
     return res.status(200).json(listClient)
 }
 

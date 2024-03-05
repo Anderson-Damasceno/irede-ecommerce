@@ -8,9 +8,9 @@ const listClients = async () => {
 
 //GET ONE
 const listClient = async (email) => {
-    const query = 'SELECT FROM Cliente Where Cliente.email = $1;'
-    const params = [email]
-    const listClient = await pool.query(query, params)
+    const query = 'SELECT * FROM Cliente Where Cliente.email = $1;'
+    const params = email
+    const listClient = await pool.query(query, [params])
     return listClient
 }
 

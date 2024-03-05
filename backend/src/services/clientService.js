@@ -10,8 +10,8 @@ const listClients = async () => {
 
 //GET ONE
 const listClient = async (email) => {
-    const listClient = clientModel.listClient(email)
-    return listClient
+    const listClient = await clientModel.listClient(email)
+    return listClient.rows
 }
 
 //POST
