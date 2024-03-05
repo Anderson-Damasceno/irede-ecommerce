@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function LoginMobile(){
     return(
         <>
         <div className="flex flex-row h-screen w-screen max-md:hidden">
             <div className="bg-slate-200 w-1/2 h-screen">
                 <div className="bg-white w-4/5 h-5/6 flex flex-col items-center justify-center m-16">
-                    
+                    <button className="bg-orange-500 rounded p-2 text-white"><Link to="/">Home</Link></button>
                     <form action="" className="flex flex-col justify-center w-4/5 h-5/6">
                         <h1 className="font-bold mb-2 text-lg">Fazer Login</h1>
                     
@@ -26,6 +28,7 @@ export default function LoginMobile(){
         </div>
         <div className="bg-sky-800 h-screen flex flex-col items-center justify-center">
             <img src="src\assets\caixa.png" alt="" className="mb-8" />
+            
             <div className="bg-white w-4/5 h-5/6 flex flex-col items-center justify-center">
                 <h1 className="font-bold">Fazer Login</h1>
                 <form action="" className="flex flex-col justify-center w-4/5 h-5/6">
@@ -38,7 +41,9 @@ export default function LoginMobile(){
 
                     <button type="submit" className="bg-orange-500 rounded text-white mt-4 w-5/6">Fazer Login</button>
                     <p>Já possui cadastro? <span className="text-orange-500">Clique Aqui</span></p>
+                    
                 </form>
+                <button className="bg-orange-500 rounded p-2 text-white"><Link to="/">Home</Link></button>
             </div>
         </div>
         </>

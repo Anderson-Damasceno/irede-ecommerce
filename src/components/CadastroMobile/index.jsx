@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 export default function CadastroMobile(){
     return(
         <>
         <div className="flex flex-row h-screen w-screen max-md:hidden">
             <div className="bg-slate-200 w-1/2 h-screen">
                 <div className="bg-white w-4/5 h-5/6 flex flex-col items-center justify-center m-16">
-                    
+                <button className="bg-orange-500 rounded p-2 text-white"><Link to="/">Home</Link></button>
                     <form action="" className="flex flex-col justify-center w-4/5 h-5/6">
                         <h1 className="font-bold mb-2 text-lg">Cadastre-se</h1>
                         <label htmlFor="name" className="font-bold mb-1">Nome:</label>
@@ -43,6 +44,7 @@ export default function CadastroMobile(){
                     <button type="submit" className="bg-orange-500 rounded text-white mt-4 w-5/6">Cadastrar</button>
                     <p>Já possui cadastro? <span className="text-orange-500">Clique aqui</span></p>
                 </form>
+                <button className="bg-orange-500 rounded p-2 text-white"><Link to="/">Home</Link></button>
             </div>
         </div>
         </>

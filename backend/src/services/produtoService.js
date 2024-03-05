@@ -5,12 +5,13 @@ const produtoModel = require('../models/produtoModel')
 //GET ALL
 const listProdutos = async () => {
     const listProdutos = await produtoModel.listProdutos()
-    console.log(listProdutos.rows[0])
-    return listProdutos
+    //console.log(listProdutos)
+    return listProdutos.rows
 }
 
 const listProduto = async (id) => {
     const listProduto = await produtoModel.listProduto(id)
+    console.log(listProduto)
     return listProduto
 }
 

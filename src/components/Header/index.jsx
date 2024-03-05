@@ -10,8 +10,12 @@ export default function Header(){
             <IoMenuSharp size={28} className="md:hidden"/>
             <img src="src\assets\caixa.png" alt="" className="md:pl-4" />
             <div className="flex flex-row gap-4 justify-center items-center">
-            <h1 className="text-white max-md:hidden">Cadastre-se</h1>
-            <button className="bg-orange-500 rounded p-2">Entrar</button>
+            <h1 className="text-white max-md:hidden">
+                <Link to="cadastro">Cadastre-se</Link>
+            </h1>
+            <button className="bg-orange-500 rounded p-2">
+                <Link to="login">Entrar</Link>
+            </button>
             <BsCart3 className="md:pr-4 text-4xl md:text-5xl"/>
             </div>
         </div>
